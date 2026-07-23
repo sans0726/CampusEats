@@ -6,7 +6,6 @@ class RegisterRequest(BaseModel):
     email: EmailStr
     password: str
     phone: str | None = None
-    role: str = "student"
 
 
 class LoginRequest(BaseModel):
@@ -17,7 +16,7 @@ class LoginRequest(BaseModel):
 class UserResponse(BaseModel):
     user_id: int
     full_name: str
-    email: str
+    email: EmailStr
     phone: str | None
     role: str
     is_active: bool

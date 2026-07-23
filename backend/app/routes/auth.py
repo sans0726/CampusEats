@@ -47,14 +47,14 @@ def register(
 
     # Create new user
     new_user = User(
-        full_name=user_data.full_name,
-        email=user_data.email,
-        password_hash=hash_password(
-            user_data.password
-        ),
-        phone=user_data.phone,
-        role=user_data.role
-    )
+    full_name=user_data.full_name,
+    email=user_data.email,
+    password_hash=hash_password(
+        user_data.password
+    ),
+    phone=user_data.phone,
+    role="student"
+)
 
     # Save user
     db.add(new_user)
